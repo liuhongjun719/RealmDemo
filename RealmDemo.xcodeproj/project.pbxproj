@@ -38,7 +38,6 @@
 		8E29ED751E6004960033B938 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		8E332EDE1E5D6CFE00B14D6E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		8E332EDF1E5D6CFE00B14D6E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		8E332F051E5EC6FF00B14D6E /* APPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPerson.h; sourceTree = "<group>"; };
 		8E97BC9E1E5FC22B000F80DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8E97BC9F1E5FC22B000F80DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8E97BCA01E5FC22B000F80DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -88,7 +87,6 @@
 		8E2733C91E5D5D3E009EBF23 /* RealmDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8E332F051E5EC6FF00B14D6E /* APPerson.h */,
 				8E97BCA31E5FC2F3000F80DE /* Controller */,
 				8E97BCA01E5FC22B000F80DE /* LoginViewController.xib */,
 				8E2733CD1E5D5D3F009EBF23 /* AppDelegate.h */,
