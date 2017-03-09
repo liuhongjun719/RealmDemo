@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z60-QT-wpp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="B6G-hh-mqI">
+            <objects>
+                <tabBarController id="z60-QT-wpp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="RGy-ma-dyn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="t1v-dZ-o1s"/>
+                        <segue destination="JAq-WJ-hTU" kind="relationship" relationship="viewControllers" id="GfI-vm-SM4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hb2-Tz-rgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="-1633"/>
+        </scene>
+        <!--不同账号登陆-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
@@ -49,6 +67,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="不同账号登陆" id="7ld-cq-rgL"/>
                     <navigationItem key="navigationItem" id="E37-kW-abo"/>
                     <connections>
                         <outlet property="userNameTextField" destination="31F-MW-KZs" id="miM-S5-CUs"/>
@@ -56,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552.79999999999995" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="390" y="-1961"/>
         </scene>
         <!--User List Table View Controller-->
         <scene sceneID="m5b-5r-UFk">
@@ -105,7 +124,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmT-f4-Fp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="-647"/>
+            <point key="canvasLocation" x="1860" y="-1961"/>
         </scene>
         <!--Add User View Controller-->
         <scene sceneID="1BN-Ot-S7P">
@@ -172,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddx-J2-emW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760.8000000000002" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="2673" y="-1961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rsd-6c-dus">
@@ -190,7 +209,55 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ji-G8-1K5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="-647"/>
+            <point key="canvasLocation" x="1142" y="-1961"/>
+        </scene>
+        <!--Json Table View Controller-->
+        <scene sceneID="GBa-2J-uoD">
+            <objects>
+                <tableViewController id="dw8-er-cEI" customClass="JsonTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="01A-9h-1Kx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="naL-PV-Er7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="naL-PV-Er7" id="RQT-ws-Ur9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dw8-er-cEI" id="suw-L7-7cC"/>
+                            <outlet property="delegate" destination="dw8-er-cEI" id="gYu-v1-DjC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZJx-id-gQu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pe3-2e-th3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="-1221"/>
+        </scene>
+        <!--JSON数据转换-->
+        <scene sceneID="bCh-VI-2aF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAq-WJ-hTU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="JSON数据转换" id="9ge-sL-vnW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N0H-ks-s4P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dw8-er-cEI" kind="relationship" relationship="rootViewController" id="sG9-lM-Qd9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMe-O9-KHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-1221"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -4,5 +4,7 @@ platform :ios, ‘7.0’
 
 target :RealmDemo do
 pod 'Realm'
+pod 'AFNetworking'
+
 end
 

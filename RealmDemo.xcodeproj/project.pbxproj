@@ -13,12 +13,23 @@
 		8E2733D51E5D5D3F009EBF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D31E5D5D3F009EBF23 /* Main.storyboard */; };
 		8E2733D71E5D5D3F009EBF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D61E5D5D3F009EBF23 /* Assets.xcassets */; };
 		8E2733DA1E5D5D3F009EBF23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D81E5D5D3F009EBF23 /* LaunchScreen.storyboard */; };
-		8E29ED6E1E5FD80C0033B938 /* DatabaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED6D1E5FD80C0033B938 /* DatabaseConfig.m */; };
-		8E29ED761E6004960033B938 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED751E6004960033B938 /* AddUserViewController.m */; };
-		8E332EE01E5D6CFE00B14D6E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E332EDF1E5D6CFE00B14D6E /* Person.m */; };
-		8E97BCA11E5FC22B000F80DE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E97BC9F1E5FC22B000F80DE /* LoginViewController.m */; };
-		8E97BCA21E5FC22B000F80DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E97BCA01E5FC22B000F80DE /* LoginViewController.xib */; };
-		8E97BCA61E5FC329000F80DE /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E97BCA51E5FC329000F80DE /* UserListTableViewController.m */; };
+		8E29ED7F1E7130B80033B938 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED7A1E7130B80033B938 /* RequestManager.m */; };
+		8E29ED801E7130B80033B938 /* ResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED7C1E7130B80033B938 /* ResponseObject.m */; };
+		8E29ED811E7130B80033B938 /* ResultAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED7E1E7130B80033B938 /* ResultAnalyzer.m */; };
+		8E29EDBA1E714BDB0033B938 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDB11E714BDB0033B938 /* AddUserViewController.m */; };
+		8E29EDBB1E714BDB0033B938 /* DatabaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDB31E714BDB0033B938 /* DatabaseConfig.m */; };
+		8E29EDBC1E714BDB0033B938 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDB51E714BDB0033B938 /* LoginViewController.m */; };
+		8E29EDBD1E714BDB0033B938 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E29EDB61E714BDB0033B938 /* LoginViewController.xib */; };
+		8E29EDBE1E714BDB0033B938 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDB71E714BDB0033B938 /* Person.m */; };
+		8E29EDBF1E714BDB0033B938 /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDB91E714BDB0033B938 /* UserListTableViewController.m */; };
+		8E29EDC41E714BE50033B938 /* JsonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDC11E714BE50033B938 /* JsonTableViewController.m */; };
+		8E29EDC51E714BE50033B938 /* MCEpisode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDC31E714BE50033B938 /* MCEpisode.m */; };
+		8E29EDD41E714C830033B938 /* MCJSONDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDC91E714C830033B938 /* MCJSONDateTransformer.m */; };
+		8E29EDD51E714C830033B938 /* MCJSONNonNullStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDCB1E714C830033B938 /* MCJSONNonNullStringTransformer.m */; };
+		8E29EDD61E714C830033B938 /* MCJSONPrimaryKeyTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDCD1E714C830033B938 /* MCJSONPrimaryKeyTransformer.m */; };
+		8E29EDD71E714C830033B938 /* MCJSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDCF1E714C830033B938 /* MCJSONValueTransformer.m */; };
+		8E29EDD81E714C830033B938 /* RLMObject+Copying.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDD11E714C830033B938 /* RLMObject+Copying.m */; };
+		8E29EDD91E714C830033B938 /* RLMObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDD31E714C830033B938 /* RLMObject+JSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,17 +43,40 @@
 		8E2733D61E5D5D3F009EBF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2733D91E5D5D3F009EBF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E2733DB1E5D5D3F009EBF23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E29ED6C1E5FD80C0033B938 /* DatabaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConfig.h; sourceTree = "<group>"; };
-		8E29ED6D1E5FD80C0033B938 /* DatabaseConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConfig.m; sourceTree = "<group>"; };
-		8E29ED741E6004960033B938 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
-		8E29ED751E6004960033B938 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
-		8E332EDE1E5D6CFE00B14D6E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		8E332EDF1E5D6CFE00B14D6E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		8E97BC9E1E5FC22B000F80DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		8E97BC9F1E5FC22B000F80DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		8E97BCA01E5FC22B000F80DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		8E97BCA41E5FC329000F80DE /* UserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListTableViewController.h; sourceTree = "<group>"; };
-		8E97BCA51E5FC329000F80DE /* UserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewController.m; sourceTree = "<group>"; };
+		8E29ED781E7130B80033B938 /* RequestHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHeader.h; sourceTree = "<group>"; };
+		8E29ED791E7130B80033B938 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		8E29ED7A1E7130B80033B938 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		8E29ED7B1E7130B80033B938 /* ResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseObject.h; sourceTree = "<group>"; };
+		8E29ED7C1E7130B80033B938 /* ResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseObject.m; sourceTree = "<group>"; };
+		8E29ED7D1E7130B80033B938 /* ResultAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultAnalyzer.h; sourceTree = "<group>"; };
+		8E29ED7E1E7130B80033B938 /* ResultAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultAnalyzer.m; sourceTree = "<group>"; };
+		8E29EDB01E714BDB0033B938 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
+		8E29EDB11E714BDB0033B938 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		8E29EDB21E714BDB0033B938 /* DatabaseConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseConfig.h; sourceTree = "<group>"; };
+		8E29EDB31E714BDB0033B938 /* DatabaseConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseConfig.m; sourceTree = "<group>"; };
+		8E29EDB41E714BDB0033B938 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8E29EDB51E714BDB0033B938 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8E29EDB61E714BDB0033B938 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8E29EDB71E714BDB0033B938 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		8E29EDB81E714BDB0033B938 /* UserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListTableViewController.h; sourceTree = "<group>"; };
+		8E29EDB91E714BDB0033B938 /* UserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewController.m; sourceTree = "<group>"; };
+		8E29EDC01E714BE50033B938 /* JsonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonTableViewController.h; sourceTree = "<group>"; };
+		8E29EDC11E714BE50033B938 /* JsonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonTableViewController.m; sourceTree = "<group>"; };
+		8E29EDC21E714BE50033B938 /* MCEpisode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEpisode.h; sourceTree = "<group>"; };
+		8E29EDC31E714BE50033B938 /* MCEpisode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEpisode.m; sourceTree = "<group>"; };
+		8E29EDC61E714C1E0033B938 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		8E29EDC81E714C830033B938 /* MCJSONDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCJSONDateTransformer.h; sourceTree = "<group>"; };
+		8E29EDC91E714C830033B938 /* MCJSONDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCJSONDateTransformer.m; sourceTree = "<group>"; };
+		8E29EDCA1E714C830033B938 /* MCJSONNonNullStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCJSONNonNullStringTransformer.h; sourceTree = "<group>"; };
+		8E29EDCB1E714C830033B938 /* MCJSONNonNullStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCJSONNonNullStringTransformer.m; sourceTree = "<group>"; };
+		8E29EDCC1E714C830033B938 /* MCJSONPrimaryKeyTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCJSONPrimaryKeyTransformer.h; sourceTree = "<group>"; };
+		8E29EDCD1E714C830033B938 /* MCJSONPrimaryKeyTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCJSONPrimaryKeyTransformer.m; sourceTree = "<group>"; };
+		8E29EDCE1E714C830033B938 /* MCJSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCJSONValueTransformer.h; sourceTree = "<group>"; };
+		8E29EDCF1E714C830033B938 /* MCJSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCJSONValueTransformer.m; sourceTree = "<group>"; };
+		8E29EDD01E714C830033B938 /* RLMObject+Copying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMObject+Copying.h"; sourceTree = "<group>"; };
+		8E29EDD11E714C830033B938 /* RLMObject+Copying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+Copying.m"; sourceTree = "<group>"; };
+		8E29EDD21E714C830033B938 /* RLMObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMObject+JSON.h"; sourceTree = "<group>"; };
+		8E29EDD31E714C830033B938 /* RLMObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+JSON.m"; sourceTree = "<group>"; };
 		F8F1A5FC20585F2C649DA302 /* libPods-RealmDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealmDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,8 +121,9 @@
 		8E2733C91E5D5D3E009EBF23 /* RealmDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8E29EDC71E714C830033B938 /* Realm+JSON */,
+				8E29ED771E7130B80033B938 /* Request */,
 				8E97BCA31E5FC2F3000F80DE /* Controller */,
-				8E97BCA01E5FC22B000F80DE /* LoginViewController.xib */,
 				8E2733CD1E5D5D3F009EBF23 /* AppDelegate.h */,
 				8E2733CE1E5D5D3F009EBF23 /* AppDelegate.m */,
 				8E2733D31E5D5D3F009EBF23 /* Main.storyboard */,
@@ -108,19 +143,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8E29ED771E7130B80033B938 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8E29ED781E7130B80033B938 /* RequestHeader.h */,
+				8E29ED791E7130B80033B938 /* RequestManager.h */,
+				8E29ED7A1E7130B80033B938 /* RequestManager.m */,
+				8E29ED7B1E7130B80033B938 /* ResponseObject.h */,
+				8E29ED7C1E7130B80033B938 /* ResponseObject.m */,
+				8E29ED7D1E7130B80033B938 /* ResultAnalyzer.h */,
+				8E29ED7E1E7130B80033B938 /* ResultAnalyzer.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8E29EDAE1E714B650033B938 /* 不同账号登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				8E29EDC61E714C1E0033B938 /* Person.h */,
+				8E29EDB01E714BDB0033B938 /* AddUserViewController.h */,
+				8E29EDB11E714BDB0033B938 /* AddUserViewController.m */,
+				8E29EDB21E714BDB0033B938 /* DatabaseConfig.h */,
+				8E29EDB31E714BDB0033B938 /* DatabaseConfig.m */,
+				8E29EDB41E714BDB0033B938 /* LoginViewController.h */,
+				8E29EDB51E714BDB0033B938 /* LoginViewController.m */,
+				8E29EDB61E714BDB0033B938 /* LoginViewController.xib */,
+				8E29EDB71E714BDB0033B938 /* Person.m */,
+				8E29EDB81E714BDB0033B938 /* UserListTableViewController.h */,
+				8E29EDB91E714BDB0033B938 /* UserListTableViewController.m */,
+			);
+			path = "不同账号登陆";
+			sourceTree = "<group>";
+		};
+		8E29EDAF1E714B650033B938 /* JSON数据转换 */ = {
+			isa = PBXGroup;
+			children = (
+				8E29EDC01E714BE50033B938 /* JsonTableViewController.h */,
+				8E29EDC11E714BE50033B938 /* JsonTableViewController.m */,
+				8E29EDC21E714BE50033B938 /* MCEpisode.h */,
+				8E29EDC31E714BE50033B938 /* MCEpisode.m */,
+			);
+			path = "JSON数据转换";
+			sourceTree = "<group>";
+		};
+		8E29EDC71E714C830033B938 /* Realm+JSON */ = {
+			isa = PBXGroup;
+			children = (
+				8E29EDC81E714C830033B938 /* MCJSONDateTransformer.h */,
+				8E29EDC91E714C830033B938 /* MCJSONDateTransformer.m */,
+				8E29EDCA1E714C830033B938 /* MCJSONNonNullStringTransformer.h */,
+				8E29EDCB1E714C830033B938 /* MCJSONNonNullStringTransformer.m */,
+				8E29EDCC1E714C830033B938 /* MCJSONPrimaryKeyTransformer.h */,
+				8E29EDCD1E714C830033B938 /* MCJSONPrimaryKeyTransformer.m */,
+				8E29EDCE1E714C830033B938 /* MCJSONValueTransformer.h */,
+				8E29EDCF1E714C830033B938 /* MCJSONValueTransformer.m */,
+				8E29EDD01E714C830033B938 /* RLMObject+Copying.h */,
+				8E29EDD11E714C830033B938 /* RLMObject+Copying.m */,
+				8E29EDD21E714C830033B938 /* RLMObject+JSON.h */,
+				8E29EDD31E714C830033B938 /* RLMObject+JSON.m */,
+			);
+			path = "Realm+JSON";
+			sourceTree = "<group>";
+		};
 		8E97BCA31E5FC2F3000F80DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E97BC9E1E5FC22B000F80DE /* LoginViewController.h */,
-				8E97BC9F1E5FC22B000F80DE /* LoginViewController.m */,
-				8E97BCA41E5FC329000F80DE /* UserListTableViewController.h */,
-				8E97BCA51E5FC329000F80DE /* UserListTableViewController.m */,
-				8E29ED6C1E5FD80C0033B938 /* DatabaseConfig.h */,
-				8E29ED6D1E5FD80C0033B938 /* DatabaseConfig.m */,
-				8E332EDE1E5D6CFE00B14D6E /* Person.h */,
-				8E332EDF1E5D6CFE00B14D6E /* Person.m */,
-				8E29ED741E6004960033B938 /* AddUserViewController.h */,
-				8E29ED751E6004960033B938 /* AddUserViewController.m */,
+				8E29EDAE1E714B650033B938 /* 不同账号登陆 */,
+				8E29EDAF1E714B650033B938 /* JSON数据转换 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,7 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E97BCA21E5FC22B000F80DE /* LoginViewController.xib in Resources */,
+				8E29EDBD1E714BDB0033B938 /* LoginViewController.xib in Resources */,
 				8E2733DA1E5D5D3F009EBF23 /* LaunchScreen.storyboard in Resources */,
 				8E2733D71E5D5D3F009EBF23 /* Assets.xcassets in Resources */,
 				8E2733D51E5D5D3F009EBF23 /* Main.storyboard in Resources */,
@@ -258,13 +347,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E97BCA61E5FC329000F80DE /* UserListTableViewController.m in Sources */,
 				8E2733CF1E5D5D3F009EBF23 /* AppDelegate.m in Sources */,
-				8E97BCA11E5FC22B000F80DE /* LoginViewController.m in Sources */,
-				8E29ED6E1E5FD80C0033B938 /* DatabaseConfig.m in Sources */,
-				8E29ED761E6004960033B938 /* AddUserViewController.m in Sources */,
-				8E332EE01E5D6CFE00B14D6E /* Person.m in Sources */,
+				8E29EDBC1E714BDB0033B938 /* LoginViewController.m in Sources */,
+				8E29EDBB1E714BDB0033B938 /* DatabaseConfig.m in Sources */,
+				8E29EDBA1E714BDB0033B938 /* AddUserViewController.m in Sources */,
+				8E29EDD61E714C830033B938 /* MCJSONPrimaryKeyTransformer.m in Sources */,
+				8E29EDD51E714C830033B938 /* MCJSONNonNullStringTransformer.m in Sources */,
+				8E29ED811E7130B80033B938 /* ResultAnalyzer.m in Sources */,
+				8E29EDBF1E714BDB0033B938 /* UserListTableViewController.m in Sources */,
+				8E29EDC41E714BE50033B938 /* JsonTableViewController.m in Sources */,
+				8E29EDD81E714C830033B938 /* RLMObject+Copying.m in Sources */,
+				8E29ED801E7130B80033B938 /* ResponseObject.m in Sources */,
+				8E29EDBE1E714BDB0033B938 /* Person.m in Sources */,
+				8E29EDC51E714BE50033B938 /* MCEpisode.m in Sources */,
+				8E29EDD41E714C830033B938 /* MCJSONDateTransformer.m in Sources */,
+				8E29EDD91E714C830033B938 /* RLMObject+JSON.m in Sources */,
+				8E29EDD71E714C830033B938 /* MCJSONValueTransformer.m in Sources */,
 				8E2733CC1E5D5D3F009EBF23 /* main.m in Sources */,
+				8E29ED7F1E7130B80033B938 /* RequestManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
