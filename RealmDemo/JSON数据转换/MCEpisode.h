@@ -26,8 +26,8 @@ typedef NS_ENUM(NSInteger, MCEpisodeType) {
 
 @property NSString *small_artwork_url;
 
-@property NSString *hls_url;
-@property NSString *video_url;
+//@property NSString *hls_url;
+//@property NSString *video_url;
 //@property NSString *web_url;
 //@property NSString *slug;
 
