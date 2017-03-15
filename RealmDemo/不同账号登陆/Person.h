@@ -14,6 +14,9 @@
 @property NSString *date;
 @property NSDate *birthdate;
 @property NSString *age;
+
+//@property NSString *sex;
+//@property NSString *address;
 //@property RLMArray<Dog *><Dog> *dogs;
 
 //@property NSInteger id;

@@ -10,7 +10,6 @@
 		5D2C0500F7305BBADDB612EF /* libPods-RealmDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F1A5FC20585F2C649DA302 /* libPods-RealmDemo.a */; };
 		8E2733CC1E5D5D3F009EBF23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2733CB1E5D5D3F009EBF23 /* main.m */; };
 		8E2733CF1E5D5D3F009EBF23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2733CE1E5D5D3F009EBF23 /* AppDelegate.m */; };
-		8E2733D51E5D5D3F009EBF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D31E5D5D3F009EBF23 /* Main.storyboard */; };
 		8E2733D71E5D5D3F009EBF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D61E5D5D3F009EBF23 /* Assets.xcassets */; };
 		8E2733DA1E5D5D3F009EBF23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2733D81E5D5D3F009EBF23 /* LaunchScreen.storyboard */; };
 		8E29ED7F1E7130B80033B938 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29ED7A1E7130B80033B938 /* RequestManager.m */; };
@@ -30,6 +29,10 @@
 		8E29EDD71E714C830033B938 /* MCJSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDCF1E714C830033B938 /* MCJSONValueTransformer.m */; };
 		8E29EDD81E714C830033B938 /* RLMObject+Copying.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDD11E714C830033B938 /* RLMObject+Copying.m */; };
 		8E29EDD91E714C830033B938 /* RLMObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDD31E714C830033B938 /* RLMObject+JSON.m */; };
+		8E29EDDD1E7639FE0033B938 /* ShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E29EDDB1E7639FE0033B938 /* ShowCell.m */; };
+		8E29EDDE1E7639FE0033B938 /* ShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E29EDDC1E7639FE0033B938 /* ShowCell.xib */; };
+		8E7F66BC1E77BDD70002DE5A /* QueryDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F66BB1E77BDD70002DE5A /* QueryDataViewController.m */; };
+		8E7F66BF1E78E4720002DE5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7F66BD1E78E4720002DE5A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,6 @@
 		8E2733CB1E5D5D3F009EBF23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E2733CD1E5D5D3F009EBF23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E2733CE1E5D5D3F009EBF23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E2733D41E5D5D3F009EBF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E2733D61E5D5D3F009EBF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E2733D91E5D5D3F009EBF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E2733DB1E5D5D3F009EBF23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +79,12 @@
 		8E29EDD11E714C830033B938 /* RLMObject+Copying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+Copying.m"; sourceTree = "<group>"; };
 		8E29EDD21E714C830033B938 /* RLMObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMObject+JSON.h"; sourceTree = "<group>"; };
 		8E29EDD31E714C830033B938 /* RLMObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMObject+JSON.m"; sourceTree = "<group>"; };
+		8E29EDDA1E7639FE0033B938 /* ShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCell.h; sourceTree = "<group>"; };
+		8E29EDDB1E7639FE0033B938 /* ShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCell.m; sourceTree = "<group>"; };
+		8E29EDDC1E7639FE0033B938 /* ShowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCell.xib; sourceTree = "<group>"; };
+		8E7F66BA1E77BDD70002DE5A /* QueryDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryDataViewController.h; sourceTree = "<group>"; };
+		8E7F66BB1E77BDD70002DE5A /* QueryDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataViewController.m; sourceTree = "<group>"; };
+		8E7F66BE1E78E4720002DE5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8F1A5FC20585F2C649DA302 /* libPods-RealmDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealmDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,9 +134,9 @@
 				8E97BCA31E5FC2F3000F80DE /* Controller */,
 				8E2733CD1E5D5D3F009EBF23 /* AppDelegate.h */,
 				8E2733CE1E5D5D3F009EBF23 /* AppDelegate.m */,
-				8E2733D31E5D5D3F009EBF23 /* Main.storyboard */,
 				8E2733D61E5D5D3F009EBF23 /* Assets.xcassets */,
 				8E2733D81E5D5D3F009EBF23 /* LaunchScreen.storyboard */,
+				8E7F66BD1E78E4720002DE5A /* Main.storyboard */,
 				8E2733DB1E5D5D3F009EBF23 /* Info.plist */,
 				8E2733CA1E5D5D3E009EBF23 /* Supporting Files */,
 			);
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				8E29EDC61E714C1E0033B938 /* Person.h */,
+				8E29EDB71E714BDB0033B938 /* Person.m */,
 				8E29EDB01E714BDB0033B938 /* AddUserViewController.h */,
 				8E29EDB11E714BDB0033B938 /* AddUserViewController.m */,
 				8E29EDB21E714BDB0033B938 /* DatabaseConfig.h */,
@@ -168,7 +177,6 @@
 				8E29EDB41E714BDB0033B938 /* LoginViewController.h */,
 				8E29EDB51E714BDB0033B938 /* LoginViewController.m */,
 				8E29EDB61E714BDB0033B938 /* LoginViewController.xib */,
-				8E29EDB71E714BDB0033B938 /* Person.m */,
 				8E29EDB81E714BDB0033B938 /* UserListTableViewController.h */,
 				8E29EDB91E714BDB0033B938 /* UserListTableViewController.m */,
 			);
@@ -182,6 +190,9 @@
 				8E29EDC11E714BE50033B938 /* JsonTableViewController.m */,
 				8E29EDC21E714BE50033B938 /* MCEpisode.h */,
 				8E29EDC31E714BE50033B938 /* MCEpisode.m */,
+				8E29EDDA1E7639FE0033B938 /* ShowCell.h */,
+				8E29EDDB1E7639FE0033B938 /* ShowCell.m */,
+				8E29EDDC1E7639FE0033B938 /* ShowCell.xib */,
 			);
 			path = "JSON数据转换";
 			sourceTree = "<group>";
@@ -205,9 +216,19 @@
 			path = "Realm+JSON";
 			sourceTree = "<group>";
 		};
+		8E7F66B91E77BDBE0002DE5A /* 数据查询 */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F66BA1E77BDD70002DE5A /* QueryDataViewController.h */,
+				8E7F66BB1E77BDD70002DE5A /* QueryDataViewController.m */,
+			);
+			path = "数据查询";
+			sourceTree = "<group>";
+		};
 		8E97BCA31E5FC2F3000F80DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F66B91E77BDBE0002DE5A /* 数据查询 */,
 				8E29EDAE1E714B650033B938 /* 不同账号登陆 */,
 				8E29EDAF1E714B650033B938 /* JSON数据转换 */,
 			);
@@ -285,10 +306,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E29EDDE1E7639FE0033B938 /* ShowCell.xib in Resources */,
+				8E7F66BF1E78E4720002DE5A /* Main.storyboard in Resources */,
 				8E29EDBD1E714BDB0033B938 /* LoginViewController.xib in Resources */,
 				8E2733DA1E5D5D3F009EBF23 /* LaunchScreen.storyboard in Resources */,
 				8E2733D71E5D5D3F009EBF23 /* Assets.xcassets in Resources */,
-				8E2733D51E5D5D3F009EBF23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +372,7 @@
 				8E2733CF1E5D5D3F009EBF23 /* AppDelegate.m in Sources */,
 				8E29EDBC1E714BDB0033B938 /* LoginViewController.m in Sources */,
 				8E29EDBB1E714BDB0033B938 /* DatabaseConfig.m in Sources */,
+				8E7F66BC1E77BDD70002DE5A /* QueryDataViewController.m in Sources */,
 				8E29EDBA1E714BDB0033B938 /* AddUserViewController.m in Sources */,
 				8E29EDD61E714C830033B938 /* MCJSONPrimaryKeyTransformer.m in Sources */,
 				8E29EDD51E714C830033B938 /* MCJSONNonNullStringTransformer.m in Sources */,
@@ -363,6 +386,7 @@
 				8E29EDD41E714C830033B938 /* MCJSONDateTransformer.m in Sources */,
 				8E29EDD91E714C830033B938 /* RLMObject+JSON.m in Sources */,
 				8E29EDD71E714C830033B938 /* MCJSONValueTransformer.m in Sources */,
+				8E29EDDD1E7639FE0033B938 /* ShowCell.m in Sources */,
 				8E2733CC1E5D5D3F009EBF23 /* main.m in Sources */,
 				8E29ED7F1E7130B80033B938 /* RequestManager.m in Sources */,
 			);
@@ -371,20 +395,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E2733D31E5D5D3F009EBF23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E2733D41E5D5D3F009EBF23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E2733D81E5D5D3F009EBF23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8E2733D91E5D5D3F009EBF23 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8E7F66BD1E78E4720002DE5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E7F66BE1E78E4720002DE5A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

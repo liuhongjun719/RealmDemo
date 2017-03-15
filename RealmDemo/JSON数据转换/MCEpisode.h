@@ -22,8 +22,16 @@ typedef NS_ENUM(NSInteger, MCEpisodeType) {
 @property NSString *title;
 @property NSString *subtitle;
 @property NSString *thumbnailURL;
-
 @property NSDate *publishedDate;
+
+@property NSString *small_artwork_url;
+
+@property NSString *hls_url;
+@property NSString *video_url;
+//@property NSString *web_url;
+//@property NSString *slug;
+
+
 
 @end
 

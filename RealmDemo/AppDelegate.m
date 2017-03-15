@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Realm/Realm.h>
 #import "Person.h"
+#import "MCEpisode.h"
 
 @interface AppDelegate ()
 
@@ -16,41 +17,72 @@
 
 @implementation AppDelegate
 
-
+        
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-//    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
-//    config.schemaVersion = 1;
-//    config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
-//        if (oldSchemaVersion < 1) {
-//            [migration renamePropertyForClass:Person.className oldName:@"name" newName:@"title"];
-//        }
-//    };
-//    [RLMRealmConfiguration setDefaultConfiguration:config];
-    
-    
+
+    [self migrateSource];
+
+    return YES;
+}
+
+
+
+
+- (void)migrateSource {
     //数据迁移
     RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
-    config.schemaVersion = 1;
+    config.schemaVersion = 1;//（如果之前从未设置过架构版本，那么这个版本号设置为 0）
+    
+    //该方法只能写一次，否则最后写的一次会覆盖前面写的，所以，应该将所有要迁移的数据对应的模型都写在这里，例如Person、MCEpisode
     config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
-        // enumerateObjects:block: 遍历了存储在 Realm 文件中的每一个“Person”对象
+        
+#pragma - 针对Person模型
         [migration enumerateObjects:Person.className
                               block:^(RLMObject *oldObject, RLMObject *newObject) {
-                                  // 只有当 Realm 数据库的架构版本为 0 或者 1 的时候，才添加“email”属性
-//                                  if (oldSchemaVersion < 1) {//当Person中新添加了date属性时，进行数据迁移
-//                                      newObject[@"date"] = @"";
+                                  //当修改模型中的字段名字时，进行数据迁移
+//                                  if (oldSchemaVersion < 1) {
+//                                      newObject[@"sex"] = @"";
 //                                  }
+                              }];
+        
+#pragma - 针对MCEpisode模型
+        [migration enumerateObjects:MCEpisode.className
+                              block:^(RLMObject *oldObject, RLMObject *newObject) {
+                                  //当修改模型中的字段名字时，进行数据迁移
+//                                  if (oldSchemaVersion < 1) {
+//                                      [migration renamePropertyForClass:Person.className oldName:@"name" newName:@"title"];
+//                                  }
+                                  
+                                  //当模型中添加新的属性时，进行数据迁移
+//                                  if (oldSchemaVersion < 1) {
+//                                      newObject[@"hls_url"] = @"";
+//                                  }
+
+//                                  if (oldSchemaVersion < 2) {
+//                                      newObject[@"video_url"] = @"";
+//                                  }
+//                                  if (oldSchemaVersion < 3) {
+//                                      newObject[@"web_url"] = @"";
+//                                  }
+////
+//                                  if (oldSchemaVersion < 4) {
+//                                      newObject[@"slug"] = @"";
+//                                  }
+                                  
+                                  
+                                  
+                                  
                               }];
     };
     [RLMRealmConfiguration setDefaultConfiguration:config];
     
-    // 现在我们已经成功更新了架构版本并且提供了迁移闭包，打开旧有的 Realm 数据库会自动执行此数据迁移，然后成功进行访问
+    //现在我们已经成功更新了架构版本并且提供了迁移闭包，打开旧有的 Realm 数据库会自动执行此数据迁移，然后成功进行访问
     [RLMRealm defaultRealm];
-    
+}
 
-    
-    
-    return YES;
+#pragma mark- 需要时可以在指定版本中将数据删除
+- (void)deleteObjects {
+        [[RLMRealm defaultRealm] deleteObjects:[MCEpisode allObjects]];
 }
 
 

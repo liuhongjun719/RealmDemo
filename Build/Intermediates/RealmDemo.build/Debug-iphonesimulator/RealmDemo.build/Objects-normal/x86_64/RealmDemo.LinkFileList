@@ -1,6 +1,7 @@
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/AppDelegate.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/LoginViewController.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/DatabaseConfig.o
+/Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/QueryDataViewController.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/AddUserViewController.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/MCJSONPrimaryKeyTransformer.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/MCJSONNonNullStringTransformer.o
@@ -14,5 +15,6 @@
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/MCJSONDateTransformer.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/RLMObject+JSON.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/MCJSONValueTransformer.o
+/Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/ShowCell.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/main.o
 /Users/a123456/Desktop/RealmDemo/Build/Intermediates/RealmDemo.build/Debug-iphonesimulator/RealmDemo.build/Objects-normal/x86_64/RequestManager.o

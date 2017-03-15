@@ -11,4 +11,9 @@
 
 @interface DatabaseConfig : NSObject
 + (void)setDefaultRealmForUser:(NSString *)username;
++ (RLMRealm *)getRealmOfUser:(NSString *)username;
 @end
+
+
+
+

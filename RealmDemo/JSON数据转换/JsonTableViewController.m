@@ -10,15 +10,14 @@
 #import "MCEpisode.h"
 
 #import <Realm/Realm.h>
-//#import "Realm+JSON/RLMObject+JSON.h"
 #import "RLMObject+JSON.h"
 
 #import <AFNetworking.h>
 #import <UIImageView+AFNetworking.h>
+#import "ShowCell.h"
 
 @interface JsonTableViewController ()
 @property (nonatomic, strong) RLMResults *results;
-@property (nonatomic, strong) RLMNotificationToken *token;
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 @end
 
@@ -26,23 +25,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.token = [[RLMRealm defaultRealm] addNotificationBlock: ^(NSString *notification, RLMRealm *realm) {
-        [self refreshData];
-    }];
-    [self refreshData];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ShowCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+
     [self reloadData];
+    id primaryKeyValue = [MCEpisode primaryKey];
+    NSLog(@"primaryKeyValue-------:%@", primaryKeyValue);
+    
+}
+
+- (void)sortData {
+    self.results = [[MCEpisode allObjects] sortedResultsUsingKeyPath:@"title" ascending:YES];
+    [self.tableView reloadData];
 }
 
 - (void)reloadData {
-    
-    
     /**
-     *  Description
+     *  Description 如果缓存中有数据，读取缓存；否则重新获取数据并缓存
      *
      */
-    RLMResults *tmpResults =  [MCEpisode allObjects];
-    if (tmpResults.count != 0) {
-        self.results = tmpResults;
+    if ([MCEpisode allObjects].count != 0) {
+        [self sortData];
     }else {
         _manager = [AFHTTPSessionManager manager];
         // 设置超时时间
@@ -52,14 +55,13 @@
         [_manager.requestSerializer setCachePolicy:NSURLRequestReturnCacheDataElseLoad];
         [_manager GET:@"https://www.nsscreencast.com/api/episodes.json" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSArray *array = responseObject[@"episodes"];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
-                RLMRealm *realm = [RLMRealm defaultRealm];
                 
-                [realm beginWriteTransaction];
-                NSArray *result = [MCEpisode createOrUpdateInRealm:realm withJSONArray:array];
-                [realm commitWriteTransaction];
-                
-                NSLog(@"result: %@", result);
+                [[RLMRealm defaultRealm] beginWriteTransaction];
+                [MCEpisode createOrUpdateInRealm:[RLMRealm defaultRealm] withJSONArray:array];
+                [[RLMRealm defaultRealm] commitWriteTransaction];
+                [self sortData];
             });
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -69,10 +71,7 @@
     
 }
 
-- (void)refreshData {
-    self.results = [[MCEpisode allObjectsInRealm:[RLMRealm defaultRealm]] sortedResultsUsingProperty:@"publishedDate" ascending:NO];
-    [self.tableView reloadData];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -88,6 +87,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.results.count;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSDateFormatter *dateFormatter = nil;
@@ -96,21 +98,15 @@
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
         dateFormatter.timeStyle = NSDateFormatterShortStyle;
     }
+
+    ShowCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     MCEpisode *episode = self.results[indexPath.row];
-    
-    cell.textLabel.text = episode.title;
-    cell.detailTextLabel.text = [dateFormatter stringFromDate:episode.publishedDate];
-//    cell.imageView.image = nil;
-//    cell.backgroundColor = episode.episodeType == MCEpisodeTypePaid ? [UIColor colorWithRed:0.996 green:0.839 blue:0.843 alpha:1]: nil;
-//    
-//    __weak UITableViewCell *weakCell = cell;
-//    [cell.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:episode.thumbnailURL]] placeholderImage:nil success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-//        weakCell.imageView.image = image;
-//        [weakCell setNeedsLayout];
-//    } failure:nil];
-//    
+    cell.title.text = episode.title;
+    cell.subtitle.text = episode.subtitle;
+    [cell.photo setImageWithURL:[NSURL URLWithString:episode.small_artwork_url] placeholderImage:nil];
+
     return cell;
 }
 

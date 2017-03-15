@@ -21,6 +21,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="t1v-dZ-o1s"/>
                         <segue destination="JAq-WJ-hTU" kind="relationship" relationship="viewControllers" id="GfI-vm-SM4"/>
+                        <segue destination="vUk-q8-2HU" kind="relationship" relationship="viewControllers" id="nbh-fy-5zQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb2-Tz-rgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,6 +67,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dR3-4I-Acs" appends="YES" id="WEj-NV-10p"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="不同账号登陆" id="7ld-cq-rgL"/>
                     <navigationItem key="navigationItem" id="E37-kW-abo"/>
@@ -74,6 +79,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dR3-4I-Acs">
+                    <connections>
+                        <action selector="hideKeyboardAction:" destination="BYZ-38-t0r" id="uO7-zK-uU7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="390" y="-1961"/>
         </scene>
@@ -90,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rax-6s-SC9" id="UPZ-hG-obI">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -211,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="1142" y="-1961"/>
         </scene>
-        <!--Json Table View Controller-->
+        <!--JSON数据转换-->
         <scene sceneID="GBa-2J-uoD">
             <objects>
                 <tableViewController id="dw8-er-cEI" customClass="JsonTableViewController" sceneMemberID="viewController">
@@ -220,11 +230,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="naL-PV-Er7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="naL-PV-Er7" customClass="ShowCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="naL-PV-Er7" id="RQT-ws-Ur9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -234,11 +244,11 @@
                             <outlet property="delegate" destination="dw8-er-cEI" id="gYu-v1-DjC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZJx-id-gQu"/>
+                    <navigationItem key="navigationItem" title="JSON数据转换" id="ZJx-id-gQu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe3-2e-th3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-1221"/>
+            <point key="canvasLocation" x="1142" y="-1221"/>
         </scene>
         <!--JSON数据转换-->
         <scene sceneID="bCh-VI-2aF">
@@ -258,6 +268,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMe-O9-KHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="390" y="-1221"/>
+        </scene>
+        <!--数据查询-->
+        <scene sceneID="Mvl-Gc-7r2">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wz3-EY-9MR" customClass="QueryDataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T2L-cK-JGM"/>
+                        <viewControllerLayoutGuide type="bottom" id="1k5-ev-erF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OQv-5z-GBj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kfS-of-UcR">
+                                <rect key="frame" x="0.0" y="126" width="375" height="592"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FPg-Ih-CAy" customClass="ShowCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FPg-Ih-CAy" id="j7H-TH-OvU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wz3-EY-9MR" id="TX6-km-5SU"/>
+                                    <outlet property="delegate" destination="wz3-EY-9MR" id="IkL-7A-x5p"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-w3-3og">
+                                <rect key="frame" x="0.0" y="64" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入需要查询的内容" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gYp-h3-raX">
+                                        <rect key="frame" x="8" y="16" width="359" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="数据查询" id="2iR-fu-ry9"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="gYp-h3-raX" id="sPb-Hi-87Z"/>
+                        <outlet property="tableView" destination="kfS-of-UcR" id="At1-Md-68G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBR-KI-yhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="-537"/>
+        </scene>
+        <!--数据查询-->
+        <scene sceneID="5WS-Mk-iY8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vUk-q8-2HU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="数据查询" id="1jX-Lk-hTu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SoC-GH-lYC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wz3-EY-9MR" kind="relationship" relationship="rootViewController" id="bsm-X6-Gqk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gtM-6A-k2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-537"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

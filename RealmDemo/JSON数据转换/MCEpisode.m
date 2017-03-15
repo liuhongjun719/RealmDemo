@@ -20,6 +20,8 @@
 			   @"episode_type": @"episodeType",
 			   @"thumbnail_url": @"thumbnailURL",
 			   @"published_at": @"publishedDate",
+               @"small_artwork_url": @"small_artwork_url",
+//               @"hls_url": @"hls_url",
 	};
 }
 
@@ -30,6 +32,8 @@
 			   @"episodeID": @"id",
 			   @"episodeNumber": @"episode.number",
 			   @"publishedDate": @"published_at",
+               @"small_artwork_url": @"small_artwork_url",
+//               @"hls_url": @"hls_url",
 	};
 }
 
